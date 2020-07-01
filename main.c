@@ -16,8 +16,8 @@ int main()
 	if ((pfile = fopen("matrix_test.exe", "r+b")) == NULL)
 	{
 		printf("Error on openning file\n");
-		return EXIT_FAILURE;
 		_getch();
+		return EXIT_FAILURE;		
 	}
 	fseek(pfile, 1122, SEEK_SET);
 	fwrite(Patch, sizeof(byte), 2, pfile);
